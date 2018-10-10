@@ -1,0 +1,17 @@
+﻿@model CommunityService.Models.Event
+
+@{
+    ViewBag.Title = "Sign Up For Event";
+}
+
+<h2>Sign Up For Event</h2>
+
+
+@using (Html.BeginForm())
+{
+    <p>Your name:</p> <input id="Name" name="Name" type="text" value="" />
+    <p>Your email:</p> <input id="Email" name="Email" type="text" value="" />
+    <p>Your phone: </p> <input id="Phone" name="Phone" type="text" value="" />
+    <br />
+    <input id="SignedUp" name="SignedUp" type="submit" value="sign up" />
+}
