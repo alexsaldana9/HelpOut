@@ -56,5 +56,10 @@ namespace CommunityService.Controllers
 
             return View();
         }
+
+        public ActionResult SignupNewsLetter()
+        {
+            return View();
+        }
     }
 }

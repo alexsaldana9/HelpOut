@@ -274,6 +274,7 @@
     <Content Include="Views\Home\ListofEvents.cshtml" />
     <Content Include="Views\Home\Thanks.cshtml" />
     <Content Include="Views\Home\ListofOrganizations.cshtml" />
+    <Content Include="Views\Home\SignUpNewsLetter.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
