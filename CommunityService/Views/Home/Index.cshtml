@@ -26,7 +26,13 @@
     <div class="col-md-4">
         <h2>Sign up</h2>
         <p>Subscribe to our newsletter.</p>
-       @Html.ActionLink("Sign up for newsletter", "SignUpNewsLetter")
-        <p><a class="btn btn-default" href="Home/SignUpForEvent">Subscribe &raquo;</a></p>
+     
+        @using (Html.BeginForm())
+        {
+            <input id="Email" name="Email" type="text" value="" placeholder="your email"/>
+            <br />
+            <input id="SignedUp" name="SignedUp" type="submit" value="sign up" />
+        }
+        
     </div>
 </div>

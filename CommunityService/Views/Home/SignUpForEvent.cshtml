@@ -1,4 +1,4 @@
-﻿@model CommunityService.Models.FactorViewModel
+﻿@model CommunityService.Models.GuestResponse
 
 @{
     ViewBag.Title = "SignUpForEvent";
@@ -6,13 +6,18 @@
 
 <h2>Sign Up for Event!!!</h2>
 
-
-
-@using (Html.BeginForm())
-{
-    <p>Your name:</p> <input id="Name" name="Name" type="text" value="" />
-    <p>Your email:</p> <input id="Email" name="Email" type="text" value="" />
-    <p>Your phone: </p> <input id="Phone" name="Phone" type="text" value="" />
-    <br />
-    <input id="SignedUp" name="SignedUp" type="submit" value="sign up" />
-}
+<body>
+    @using (Html.BeginForm())
+    {
+        <p>Your name: @Html.TextBoxFor(x => x.Name) </p>
+        <p>Your email: @Html.TextBoxFor(x => x.Email)</p>
+        <p>Your phone: @Html.TextBoxFor(x => x.Phone)</p>
+        <p>
+            Will you attend?
+            @Html.DropDownListFor(x => x.SignedUp, new[] {
+             new SelectListItem() {Text = "Yes, I'll be there",
+             Value = bool.TrueString} }, "Attending")
+        </p>
+        <input type="submit" value="Attending" />
+    }
+</body>

@@ -49,12 +49,12 @@ namespace CommunityService.Controllers
         //}
 
       
-        public ActionResult SignUpForEvent()
+        public ActionResult SignUpForEvent(GuestResponse guestResponse)
         {
             // TODO: Email response to the party organizer
-            //return View("Thanks", guestResponse);
+            return View("Thanks", guestResponse);
 
-            return View();
+            //return View();
         }
 
         public ActionResult SignupNewsLetter()
