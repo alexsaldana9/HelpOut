@@ -39,22 +39,18 @@ namespace CommunityService.Controllers
             return View();
         }
 
-        //[HttpPost]
-        //public ViewResult SignUpForEvent(GuestResponse guestResponse)
-        //{
-        //    // TODO: Email response to the party organizer
-        //    //return View("Thanks", guestResponse);
-
-        //    return View();
-        //}
-
-      
-        public ActionResult SignUpForEvent(GuestResponse guestResponse)
+        [HttpPost]
+        public ViewResult SignUpForEvent(GuestResponse guestResponse)
         {
             // TODO: Email response to the party organizer
+            // TODO: save in the database
             return View("Thanks", guestResponse);
+        }
 
-            //return View();
+
+        public ActionResult SignUpForEvent()
+        {
+            return View();
         }
 
         public ActionResult SignupNewsLetter()
