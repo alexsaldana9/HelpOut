@@ -9,6 +9,8 @@ namespace CommunityService.Controllers
 {
     public class HomeController : Controller
     {
+  
+
         public ActionResult Index()
         {
             ViewBag.Greeting = "Hello, here are events where you can help";

@@ -1,0 +1,17 @@
+﻿@model CommunityService.Models.Event
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+@using (Html.BeginForm("CreateEvent", "CreateEvent"))
+{
+    <p>Event Title: @Model.Title </p>
+    <p>Description: @Model.Description</p>
+    <p>Location: @Model.Location</p>
+    <p>Category: @Model.Category</p>
+    <p>Additional Information: @Model.ExtraInfo</p>
+    
+}

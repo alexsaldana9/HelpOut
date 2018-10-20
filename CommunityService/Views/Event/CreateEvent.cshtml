@@ -1,0 +1,26 @@
+﻿@model CommunityService.Models.Event
+
+@{
+    ViewBag.Title = "CreateEvent";
+}
+
+<h2>CreateEvent</h2>
+
+<body>
+
+    @using (Html.BeginForm("CreateEvent", "CreateEvent"))
+    {
+        <p>Event Title: @Html.TextBoxFor(x => x.Title) </p>
+        <p>Description: @Html.TextBoxFor(x => x.Description)</p>
+        <p>Location: @Html.TextBoxFor(x => x.Location)</p>
+        <p>Category: @Html.TextBoxFor(x => x.Category)</p>
+        <p>Additional Information: @Html.TextBoxFor(x => x.ExtraInfo)</p>
+        <p>
+           
+        </p>
+        <input type="submit" value="CreateEvent" />
+    }
+
+
+</body>
+  

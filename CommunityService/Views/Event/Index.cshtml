@@ -1,0 +1,21 @@
+﻿@using CommunityService.Models
+@model List<Event>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>List of Events</h2>
+
+@Model.Count
+
+@foreach (var e in Model)
+{
+    <h1>@e.Title</h1>
+    <p>@e.Description</p>
+    <p>@e.Category</p>
+    <p>@e.ExtraInfo</p>
+    <p>--------------</p>
+
+
+}
