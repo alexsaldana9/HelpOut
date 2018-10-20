@@ -1,13 +1,12 @@
 ﻿@model CommunityService.Models.GuestResponse
 
-@{
-    ViewBag.Title = "SignUpForEvent";
-}
 
-<h2>Sign Up for Event!!!</h2>
+<h2>SignUpForEvent</h2>
+
 
 <body>
-    @using (Html.BeginForm())
+
+    @using (Html.BeginForm("SignUp", "SignUpForEvent"))
     {
         <p>Your name: @Html.TextBoxFor(x => x.Name) </p>
         <p>Your email: @Html.TextBoxFor(x => x.Email)</p>
@@ -20,4 +19,6 @@
         </p>
         <input type="submit" value="Attending" />
     }
+
+
 </body>
