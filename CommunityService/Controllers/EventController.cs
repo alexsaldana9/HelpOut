@@ -37,7 +37,18 @@ namespace CommunityService.Controllers
 
         public ActionResult Details(int id)
         {
-            return View();
+            
+            var selectedEvent = EventStorage.Find(e => e.EventID == id);
+
+            if (selectedEvent == null)
+            {
+                return View("NotFound");
+            }
+            else
+            {
+                return View(selectedEvent);
+            }
+            
         }
 
 
