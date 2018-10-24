@@ -9,7 +9,7 @@ namespace CommunityService.Controllers
 {
     public class EventController : Controller
     {
-        public List<Event> EventStorage = new List<Event>
+        public static List<Event> EventStorage = new List<Event>
         {
             new Event{
                 Category = "Animal Services",
@@ -36,8 +36,7 @@ namespace CommunityService.Controllers
         }
 
         public ActionResult Details(int id)
-        {
-            
+        {   
             var selectedEvent = EventStorage.Find(e => e.EventID == id);
 
             if (selectedEvent == null)
@@ -48,13 +47,31 @@ namespace CommunityService.Controllers
             {
                 return View(selectedEvent);
             }
-            
         }
 
-
-        public ActionResult CreateEvent(Event @event)
+        public ActionResult Create()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(Event @event)
+        {
+            //TODO: save the event
+            // parts.Add(new Part() {PartName="crank arm", PartId=1234});
+            //EventStorage.Add(new Event()
+            //{
+            //    Category = @event.Category,
+            //    Description = @event.Description,
+            //    EventID = @event.EventID,
+            //    ExtraInfo = @event.ExtraInfo,
+            //    Location = @event.Location,
+            //    Title = @event.Title
+            //});
+            @event.EventID = EventStorage.Count + 1;
+            EventStorage.Add(@event);
+
+            return RedirectToAction("Details", new { id = @event.EventID });
         }
     }
 }

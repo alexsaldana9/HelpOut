@@ -16,6 +16,7 @@ namespace CommunityService.Controllers
             return View();
         }
 
+        //TODO:  redirect to thanks
 
         [HttpPost]
         public ViewResult SignUp(GuestResponse guestResponse)

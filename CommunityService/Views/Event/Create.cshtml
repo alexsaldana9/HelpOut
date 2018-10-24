@@ -1,14 +1,14 @@
 ﻿@model CommunityService.Models.Event
 
 @{
-    ViewBag.Title = "CreateEvent";
+    ViewBag.Title = "Create";
 }
 
 <h2>CreateEvent</h2>
 
 <body>
 
-    @using (Html.BeginForm("CreateEvent", "CreateEvent"))
+    @using (Html.BeginForm("Create", "Event"))
     {
         <p>Event Title: @Html.TextBoxFor(x => x.Title) </p>
         <p>Description: @Html.TextBoxFor(x => x.Description)</p>
@@ -18,7 +18,7 @@
         <p>
            
         </p>
-        <input type="submit" value="CreateEvent" />
+        <input type="submit" value="Create" />
     }
 
 

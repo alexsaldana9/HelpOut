@@ -278,7 +278,7 @@
     <Content Include="Views\Home\SignUpNewsLetter.cshtml" />
     <Content Include="Views\SignUpForEvent\Index.cshtml" />
     <Content Include="Views\Event\Index.cshtml" />
-    <Content Include="Views\Event\CreateEvent.cshtml" />
+    <Content Include="Views\Event\Create.cshtml" />
     <Content Include="Views\Event\Details.cshtml" />
     <Content Include="Views\Event\NotFound.cshtml" />
   </ItemGroup>
